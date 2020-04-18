@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+/* General */
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #131b16;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes colorchange {
+  0% {
+    border-color: #f0e768;
+  }
+  25% {
+    border-color: #68f095;
+  }
+  50% {
+    border-color: #68d5f0;
+  }
+  75% {
+    border-color: #f068a5;
+  }
+  100% {
+    border-color: #f0c068;
+  }
+}
+
+/* Nav top */
+.nav {
+  border-top: 5px solid white;
+  animation: colorchange 20s infinite alternate;
+}
+
+/* Heading */
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Socials */
+.socials {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socials > div > a {
+  transition: all 150ms;
+  font-size: 24px;
+  align-self: center;
+  margin: 5px 15px;
+}
+.socials > .twitter > a:first-child {
+  color: #1ca1f3;
+}
+.socials > .twitter > a:first-child:hover {
+  color: #41b6ff;
+}
+.socials > .twitch > a:last-child {
+  color: #a462ff;
+}
+.socials > .twitch > a:last-child:hover {
+  color: #b179ff;
+}
+
+.text {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  padding: 2rem 0;
+}
+
+/* Main */
+.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 39rem; 
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  main {
+    top: 770px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+/* Card */
+.card {
+  width: 15rem;
+  height: 15rem;
+  background-color: #202b24;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 10px;
+  transition: all 150ms;
+}
+
+.card-logo {
+  border: 3px solid #f068a5;
+}
+.card-logo:hover {
+  background-color: #253029;
+  box-shadow: 0 0 10px #f068a5;
+}
+
+.card-rules {
+  border: 3px solid #68d5f0;
+}
+.card-rules:hover {
+  background-color: #253029;
+  box-shadow: 0 0 10px #68d5f0;
+}
+
+.card-prizes {
+  border: 3px solid #f0e768;
+}
+.card-prizes:hover {
+  background-color: #253029;
+  box-shadow: 0 0 10px #f0e768;
+}
+
+.card-start {
+  border: 3px solid #68f095;
+}
+.card-start:hover {
+  background-color: #253029;
+  box-shadow: 0 0 10px #68f095;
+}
+
+.logo-card {
+  width: 15rem;
+  height: 15rem;
+}
+
+/* Download Section */
+.download {
+  width: 100%;
+  display: flex;
+}
+.download > a {
+  flex: 1;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  color: #253029;
+  font-size: 16px;
+  transition: all 150ms;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* Custom Colors */
+.btn-green {
+  background-color: #68f095;
+}
+.btn-green:hover {
+  background-color: #9fffbf;
+}
+.btn-green:active {
+  background-color: #33b85f;
+}
+
+/* Helpers */
+.blue {
+  color: #68d5f0;
+}
